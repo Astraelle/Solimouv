@@ -1,0 +1,20 @@
+# Rust build artifacts
+/target/
+
+# Cargo lock (optionnel selon projet)
+Cargo.lock
+
+# IDE / éditeurs
+.vscode/
+.idea/
+
+# Système
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environnement local
+.env
+.env.*
