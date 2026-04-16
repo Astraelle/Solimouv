@@ -14,8 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mon PWA",
-  description: "App installable Next.js",
+  title: "Solimouv - Festival du sport inclusif",
+  description:
+    "Festival Solimouv organisé par Up Sport! pour un sport accessible à tous.",
   manifest: "/manifest.webmanifest",
   themeColor: "#000000",
 };
