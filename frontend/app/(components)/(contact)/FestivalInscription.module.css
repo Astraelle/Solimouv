@@ -1,0 +1,459 @@
+/* ===========================
+   APP WRAPPER
+   =========================== */
+.appWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #e8e8e8;
+  padding: 20px;
+}
+
+/* ===========================
+   PHONE SHELL
+   =========================== */
+.phone {
+  width: 375px;
+  min-height: 812px;
+  background: #ffffff;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* ===========================
+   STATUS BAR
+   =========================== */
+.statusBar {
+  background: #2D1B8E;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px 6px;
+  flex-shrink: 0;
+}
+
+.foxIcon {
+  font-size: 20px;
+}
+
+.statusLeft {
+  display: flex;
+  align-items: center;
+}
+
+.statusBadges {
+  display: flex;
+  gap: 6px;
+}
+
+.badge {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.02em;
+}
+
+/* ===========================
+   HERO BANNER
+   =========================== */
+.heroBanner {
+  background: linear-gradient(160deg, #2D1B8E 0%, #4A2DB5 50%, #3D2BA0 100%);
+  padding: 28px 24px 36px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.heroWaves {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.wave1 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: rgba(255, 107, 26, 0.15);
+  top: -80px;
+  right: -60px;
+}
+
+.wave2 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  bottom: -60px;
+  left: 20px;
+}
+
+.heroTitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.1;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 8px;
+}
+
+.heroSubtitle {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.85);
+  position: relative;
+  z-index: 1;
+}
+
+/* ===========================
+   CONTENT (scrollable)
+   =========================== */
+.content {
+  flex: 1;
+  overflow-y: auto;
+  background: #ffffff;
+  padding-bottom: 80px;
+}
+
+.content::-webkit-scrollbar {
+  width: 0;
+}
+
+/* ===========================
+   PROFILE TABS
+   =========================== */
+.profileTabs {
+  display: flex;
+  gap: 6px;
+  padding: 16px 16px 0;
+  margin-bottom: 4px;
+}
+
+.tab {
+  flex: 1;
+  padding: 8px 4px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 20px;
+  background: transparent;
+  color: #444;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Poppins', sans-serif;
+  white-space: nowrap;
+}
+
+.tab:hover {
+  border-color: #FF6B1A;
+  color: #FF6B1A;
+}
+
+.tabActive {
+  background: #FF6B1A;
+  border-color: #FF6B1A;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* ===========================
+   FORM
+   =========================== */
+.form {
+  padding: 16px 16px 8px;
+}
+
+.formTitle {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+}
+
+/* ===========================
+   FIELD
+   =========================== */
+.field {
+  margin-bottom: 12px;
+}
+
+.label {
+  display: block;
+  font-size: 10px;
+  font-weight: 600;
+  color: #888;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid #e8e8e8;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #1a1a1a;
+  background: #fafafa;
+  outline: none;
+  transition: border-color 0.2s;
+  font-family: 'Poppins', sans-serif;
+}
+
+.input::placeholder {
+  color: #bbb;
+}
+
+.input:focus {
+  border-color: #FF6B1A;
+  background: #fff;
+}
+
+.select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid #e8e8e8;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #888;
+  background: #fafafa url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23999' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat right 12px center;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: border-color 0.2s;
+}
+
+.select:focus {
+  border-color: #FF6B1A;
+}
+
+.textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid #e8e8e8;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #1a1a1a;
+  background: #fafafa;
+  outline: none;
+  resize: vertical;
+  transition: border-color 0.2s;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+}
+
+.textarea::placeholder {
+  color: #bbb;
+}
+
+.textarea:focus {
+  border-color: #FF6B1A;
+  background: #fff;
+}
+
+/* ===========================
+   PILLS (créneaux)
+   =========================== */
+.pillGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.pill {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid #e8e8e8;
+  border-radius: 8px;
+  background: #fafafa;
+  color: #444;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s;
+  font-family: 'Poppins', sans-serif;
+}
+
+.pill:hover {
+  border-color: #FF6B1A;
+  color: #FF6B1A;
+}
+
+.pillActive {
+  background: #FF6B1A;
+  border-color: #FF6B1A;
+  color: #ffffff;
+}
+
+/* ===========================
+   TAGS (rôles)
+   =========================== */
+.tagGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.tag {
+  padding: 6px 12px;
+  border: 1.5px solid #e8e8e8;
+  border-radius: 20px;
+  background: #fafafa;
+  color: #444;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Poppins', sans-serif;
+}
+
+.tag:hover {
+  border-color: #FF6B1A;
+  color: #FF6B1A;
+}
+
+.tagActive {
+  background: #FF6B1A;
+  border-color: #FF6B1A;
+  color: #ffffff;
+}
+
+/* ===========================
+   CHECKBOXES
+   =========================== */
+.checkboxGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 14px 0;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.checkboxLabel input[type='checkbox'] {
+  width: 15px;
+  height: 15px;
+  min-width: 15px;
+  margin-top: 1px;
+  accent-color: #FF6B1A;
+  cursor: pointer;
+}
+
+.checkboxLabel span {
+  font-size: 11px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* ===========================
+   SUBMIT BUTTON
+   =========================== */
+.submitBtn {
+  width: 100%;
+  padding: 14px;
+  background: #e0e0e0;
+  color: #999;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.2s;
+  margin-bottom: 4px;
+}
+
+.submitBtn:hover {
+  background: #FF6B1A;
+  color: #ffffff;
+}
+
+/* ===========================
+   BOTTOM NAV
+   =========================== */
+.bottomNav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 72px;
+  background: #ffffff;
+  border-top: 1px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 8px 8px;
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.navItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 8px;
+  transition: background 0.15s;
+}
+
+.navItem:hover {
+  background: #fff5f0;
+}
+
+.navIcon {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.navLabel {
+  font-size: 10px;
+  font-weight: 500;
+  color: #999;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navItemActive .navLabel {
+  color: #FF6B1A;
+  font-weight: 600;
+}
+
+/* ===========================
+   RESPONSIVE — full mobile
+   =========================== */
+@media (max-width: 440px) {
+  .appWrapper {
+    padding: 0;
+    background: #fff;
+  }
+
+  .phone {
+    width: 100vw;
+    min-height: 100vh;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
