@@ -1,17 +1,16 @@
 import Link from "next/link";
+import Hero from "./(components)/(home)/HeroComponent";
+import AboutSection from "./(components)/(home)/AboutSection";
+import SolimouvSection from "./(components)/(home)/SolimouvSection";
+import ContactSection from "./(components)/(home)/ContactSection";
 
 export default function Home() {
   return (
-    <main className="p-6">
-      <h1 className="text-3xl font-bold">Solimouv’</h1>
-      <p className="mt-2">
-        Le festival du sport inclusif organisé par Up Sport!
-      </p>
-
-      <div className="mt-6 flex gap-4">
-        <Link href="/programme">Programme</Link>
-        <Link href="/a-propos">À propos</Link>
-      </div>
+    <main>
+      <Hero/>
+      <AboutSection/>
+      <SolimouvSection/>
+      <ContactSection/>
     </main>
   );
 }
